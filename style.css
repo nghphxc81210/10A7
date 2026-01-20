@@ -1,20 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 :root
 {
 	/*------ Font family -------*/
-	--heading-font: 'Poppins', sans-serif;
-	--para-font: 'Quattrocento Sans', sans-serif;*/
+	--heading-font: 'Pacifico', cursive;
+	--para-font: 'Be Vietnam Pro', sans-serif;
 
 	/*------ Colors -------*/
-	--primary-color: #65e5da;        /*-- light green color --*/
-	--secondary-color: #dfeee3;      /*-- light gray color --*/
-	--third-color: #000000;          /*-- Black color ----*/
-	--fourth-color: #ffffff;          /*-- White color ----*/
+	--primary-color: #65e5da;
+	--secondary-color: #dfeee3;
+	--third-color: #000000;
+	--fourth-color: #ffffff;
 
 	/*------ Container padding -------*/
 	--cont-padding: 2.5rem 1.5rem;
 }
+
 
 *
 {
@@ -116,9 +117,28 @@ img:hover
 }
 
 /*-------------- Header section ------------*/
-.header
-{
-	background-image: linear-gradient(40deg, #65e5da, #fff0e5);
+.header {
+	position: relative;
+	min-height: 100vh;
+	background: linear-gradient(
+		180deg,
+		#65e5da 0%,
+		#8ef0e7 45%,
+		#dffaf6 75%,
+		#ffffff 100%
+	);
+}
+
+.header::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(
+		ellipse at center,
+		rgba(255,255,255,0.15),
+		rgba(255,255,255,0)
+	);
+	pointer-events: none;
 }
 
 .header .container .row
@@ -322,10 +342,16 @@ img:hover
 	}
 
 	/*------------- Header section ------------------*/
-	.logo h4
-	{
+	.logo h4 {
 		text-align: left;
+		font-family: 'Bebas Neue', sans-serif;
+		font-size: 2.6rem;
+		letter-spacing: 3px;
+		color: #000;
+		line-height: 1;
 	}
+	
+	
 
 	.header .container .row
 	{
@@ -404,5 +430,31 @@ img:hover
 		align-items: flex-start;
 	}
 	/*------------- Footer section --------------*/
+	.main-heading {
+		font-weight: 400;
+		letter-spacing: 1px;
+	}
+	
+	.main-heading span {
+		font-family: 'Be Vietnam Pro', sans-serif;
+		font-weight: 700;
+	}
+	
+	.section-heading,
+	.logo h4,
+	.sub-heading {
+		font-family: 'Pacifico', cursive;
+	}
+	
+	.para-line,
+	.link-item a {
+		font-family: 'Be Vietnam Pro', sans-serif;
+		font-weight: 400;
+		line-height: 1.7;
+	}
+	
 }
+
+
+
 /*--------------- Desktop & Tablet version --------------*/
