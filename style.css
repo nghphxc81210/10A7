@@ -452,7 +452,18 @@ img:hover
 		font-weight: 400;
 		line-height: 1.7;
 	}
-	
+
+	#viewCount {
+	position: fixed;
+	top: 15px;
+	right: 20px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #000;
+	opacity: 0.75;
+	z-index: 9999;
+	}
+
 }
 
 
